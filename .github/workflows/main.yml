@@ -27,11 +27,11 @@ jobs:
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.WC2_SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: | 
           whoami
-          echo "hello"
+          
   
