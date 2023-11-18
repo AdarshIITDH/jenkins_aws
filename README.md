@@ -166,13 +166,27 @@ SMTP settings are :
 
 
 
-### Objective-2:
+### Objective-2: GitHub Actions CI/CD Pipeline Flask App
 
+### Implement a CI/CD workflow using GitHub Actions for a Python application.
 
+1. Setup:
+   - Use a provided Python application repository on GitHub (provide a link to a sample Python application repository).
+   - Ensure the repository has a main branch and a staging branch.
+Github Repo: https://github.com/AdarshIITDH/jenkins_aws.git
 
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/e34def44-04f8-451d-a5d9-1b0f966c1301)
 
+2. GitHub Actions Workflow:
+   - Create a .github/workflows directory in your repository.
+   - Inside the directory, create a YAML file to define the workflow.
 
+Go to Actions > create a new workflow as main.yml
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/a293fe65-11d1-4bf7-ae9e-7e0cf53bc1b3)
 
+```
+
+```
 
 
 
