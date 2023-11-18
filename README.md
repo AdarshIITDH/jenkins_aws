@@ -1,6 +1,6 @@
 # Jenkins CI CD pipeline for flask application
 
-### Objective:
+### Objective-1:
 Set up a Jenkins pipeline that automates the testing and deployment of a simple Python web application.
 
 1. Setup:
@@ -163,6 +163,19 @@ SMTP settings are :
   - SMTP Port - 465
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/7fdd720e-3ac3-4298-9c68-7a3fd57ce469)
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/817e1ab0-aa73-487c-ad44-6bf12e189f8f)
+
+
+
+### Objective-2:
+
+
+
+
+
+
+
+
+
 
 
 
