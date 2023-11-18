@@ -33,4 +33,5 @@ jobs:
         port: ${{ secrets.PORT }}
         script: | 
           whoami
+          echo "hello"
   
