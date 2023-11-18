@@ -1,0 +1,36 @@
+name: Ec2-deployment
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - name: code checkout
+      uses: actions/checkout@v2
+      
+    - name: install dependencies
+      run: |
+        sudo apt update
+        sudo apt install python3-pip
+        sudo pip install streamlit
+        sudo pip install pytest
+        
+    - name: build and test
+      run: |
+        # testing scripts
+        
+    - name : deployment step
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: | 
+          whoami
+  
