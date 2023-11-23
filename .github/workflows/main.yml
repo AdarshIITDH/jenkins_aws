@@ -20,8 +20,19 @@ jobs:
         sudo pip install streamlit
         sudo pip install pytest
   test:
-    runs-on: ubuntu-latest
+    run-on: ubuntu-latest
     steps:     
+    
+    - name: code checkout
+      uses: actions/checkout@v2
+      
+    - name: install dependencies
+      run: |
+        sudo apt update
+        sudo apt install python3-pip
+        sudo pip install streamlit
+        sudo pip install pytest
+        
     - name: build and test
       run: |
         # testing scripts
@@ -33,7 +44,7 @@ jobs:
         #git checkout staging
         
   deploy:
-    runs-on: ubuntu-latest
+    run-on: ubuntu-latest
     steps:         
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
