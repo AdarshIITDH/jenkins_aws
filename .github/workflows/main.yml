@@ -20,7 +20,7 @@ jobs:
         sudo pip install streamlit
         sudo pip install pytest
   test:
-    run-on: ubuntu-latest
+    # run-on: ubuntu-latest
     steps:     
     - name: build and test
       run: |
@@ -33,7 +33,7 @@ jobs:
         #git checkout staging
         
   deploy:
-    run-on: ubuntu-latest
+    # run-on: ubuntu-latest
     steps:         
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
