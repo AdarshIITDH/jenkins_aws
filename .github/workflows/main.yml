@@ -40,13 +40,11 @@ jobs:
         port: ${{ secrets.PORT }}
         script: | 
           whoami
-          #echo "hello"
-          #touch /home/ubuntu/apple.txt
           cd /home/ubuntu/
           git clone https://github.com/AdarshIITDH/jenkins_aws.git
-          apt install -y python3-pip
-          pip install -y streamlit 
-          streamlit run calculator.py
+          sudo apt install -y python3-pip
+          sudo pip install -y streamlit 
+          sudo streamlit run calculator.py
           
           
           
