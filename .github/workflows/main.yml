@@ -54,7 +54,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: | 
-          whoami
+
           cd /home/ubuntu/
           git clone https://github.com/AdarshIITDH/jenkins_aws.git
           sudo apt install -y python3-pip
