@@ -28,7 +28,7 @@ jobs:
     - name: pushing code to staging
       run: |
         # testcases are passed pushing code to staging
-        git checkout staging
+        #git checkout staging
         
         
     - name : deployment step
@@ -41,5 +41,6 @@ jobs:
         script: | 
           whoami
           echo "hello"
+          touch /home/ubuntu/apple.txt
           
   
