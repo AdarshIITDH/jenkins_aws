@@ -24,6 +24,12 @@ jobs:
       run: |
         # testing scripts
         pytest test_calculator.py
+    
+    - name: pushing code to staging
+      run: |
+        # testcases are passed pushing code to staging
+        git checkout staging
+        
         
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
