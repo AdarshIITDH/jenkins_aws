@@ -185,7 +185,67 @@ Go to Actions > create a new workflow as main.yml
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/a293fe65-11d1-4bf7-ae9e-7e0cf53bc1b3)
 
 ```
+name: Ec2-deployment
 
+on: 
+  push:
+    branches: 
+      - main
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - name: code checkout
+      uses: actions/checkout@v2
+      
+    - name: install dependencies
+      run: |
+        sudo apt update
+        sudo apt install python3-pip
+        sudo pip install streamlit
+        sudo pip install pytest
+  test:
+    runs-on: ubuntu-latest
+    steps:     
+    
+    - name: code checkout
+      uses: actions/checkout@v2
+      
+    - name: install dependencies
+      run: |
+        sudo apt update
+        sudo apt install python3-pip
+        sudo pip install streamlit
+        sudo pip install pytest
+        
+    - name: build and test
+      run: |
+        # testing scripts
+        pytest test_calculator.py
+    
+    - name: pushing code to staging
+      run: |
+        # testcases are passed pushing code to staging
+        #git checkout staging
+        
+  deploy:
+    runs-on: ubuntu-latest
+    steps:         
+    - name: deployment step
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: ${{ secrets.PORT }}
+        script: | 
+          cd /home/ubuntu/
+          git clone https://github.com/AdarshIITDH/jenkins_aws.git
+          sudo apt install -y python3-pip
+          sudo pip install streamlit 
+          sudo streamlit run /home/ubuntu/jenkins_aws/calculator.py
 ```
 
 3. Workflow Steps:
@@ -196,9 +256,13 @@ Go to Actions > create a new workflow as main.yml
      - Deploy to Staging: Deploy the application to a staging environment when changes are pushed to the staging branch.
      - Deploy to Production: Deploy the application to production when a release is tagged.
 
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/38cf7ce2-20a1-4424-ac7b-972d218e36db)
 
 
+4. Environment Secrets:
+   - Use GitHub Secrets to store sensitive information required for deployments (e.g., deployment keys, API tokens).
 
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/a4bff23c-68b3-4655-9242-10426d7bbbee)
 
 
 
