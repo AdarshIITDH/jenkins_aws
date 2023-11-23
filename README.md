@@ -188,6 +188,14 @@ Go to Actions > create a new workflow as main.yml
 
 ```
 
+3. Workflow Steps:
+   - Define a workflow that performs the following jobs:
+     - Install Dependencies: Install all necessary dependencies for the Python application using pip.
+     - Run Tests: Execute the test suite using a framework like pytest.
+     - Build: If tests pass, prepare the application for deployment.
+     - Deploy to Staging: Deploy the application to a staging environment when changes are pushed to the staging branch.
+     - Deploy to Production: Deploy the application to production when a release is tagged.
+
 
 
 
