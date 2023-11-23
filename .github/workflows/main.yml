@@ -6,7 +6,7 @@ on:
       - main
 
 jobs: 
-  deploy:
+  build:
     runs-on: ubuntu-latest
     
     steps: 
@@ -19,7 +19,9 @@ jobs:
         sudo apt install python3-pip
         sudo pip install streamlit
         sudo pip install pytest
-        
+  test:
+    run-on: ubuntu-latest
+    steps:     
     - name: build and test
       run: |
         # testing scripts
@@ -30,7 +32,9 @@ jobs:
         # testcases are passed pushing code to staging
         #git checkout staging
         
-        
+  deploy:
+    run-on: ubuntu-latest
+    steps:         
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
       with:
@@ -44,7 +48,6 @@ jobs:
           git clone https://github.com/AdarshIITDH/jenkins_aws.git
           sudo apt install -y python3-pip
           sudo pip install streamlit 
-          
           sudo streamlit /home/ubuntu/jenkins_aws/run calculator.py
           
           
