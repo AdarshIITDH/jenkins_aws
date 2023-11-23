@@ -23,6 +23,7 @@ jobs:
     - name: build and test
       run: |
         # testing scripts
+        pytest test_calculator.py
         
     - name : deployment step
       uses: appleboy/ssh-action@v1.0.0
