@@ -59,7 +59,7 @@ jobs:
           git clone https://github.com/AdarshIITDH/jenkins_aws.git
           sudo apt install -y python3-pip
           sudo pip install streamlit 
-          sudo streamlit /home/ubuntu/jenkins_aws/run calculator.py
+          sudo streamlit run /home/ubuntu/jenkins_aws/calculator.py
           
           
           
