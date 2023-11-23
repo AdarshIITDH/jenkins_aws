@@ -43,7 +43,7 @@ jobs:
           cd /home/ubuntu/
           git clone https://github.com/AdarshIITDH/jenkins_aws.git
           sudo apt install -y python3-pip
-          sudo pip install -y streamlit 
+          sudo pip install streamlit 
           sudo streamlit run calculator.py
           
           
