@@ -239,6 +239,10 @@ SMTP settings are :
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/7fdd720e-3ac3-4298-9c68-7a3fd57ce469)
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/817e1ab0-aa73-487c-ad44-6bf12e189f8f)
 
+We receive the email notification
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/b08ed72b-2b29-4f55-838a-b84d5db4277f)
+
+
 Applications is up and running
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/5839db75-4433-4b3d-80fb-7b4db539c260)
 
