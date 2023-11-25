@@ -239,6 +239,8 @@ SMTP settings are :
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/7fdd720e-3ac3-4298-9c68-7a3fd57ce469)
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/817e1ab0-aa73-487c-ad44-6bf12e189f8f)
 
+Applications is up and running
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/5839db75-4433-4b3d-80fb-7b4db539c260)
 
 
 ### Objective-2: GitHub Actions CI/CD Pipeline Flask App
@@ -339,6 +341,8 @@ jobs:
 
 ![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/a4bff23c-68b3-4655-9242-10426d7bbbee)
 
+Application is up and running
+![image](https://github.com/AdarshIITDH/jenkins_aws/assets/60352729/3433b0fb-e28c-4799-9e38-ddc023ba57ac)
 
 
 
